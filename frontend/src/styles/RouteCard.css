@@ -1,0 +1,148 @@
+.route-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+}
+
+.route-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.route-card-image {
+  width: 100%;
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--light-gray);
+}
+
+.route-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.route-card-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(255, 215, 0, 0.1) 100%);
+}
+
+.route-category-icon {
+  font-size: 4rem;
+  filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.2));
+}
+
+.favorite-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  color: #ccc;
+}
+
+.favorite-btn:hover {
+  transform: scale(1.1);
+}
+
+.favorite-btn.locked {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.favorite-btn.locked:hover {
+  color: var(--primary-color);
+  background: rgba(255, 255, 255, 1);
+}
+
+.favorite-btn.active {
+  color: #ff4757;
+  background: rgba(255, 255, 255, 1);
+}
+
+.favorite-btn.active:hover {
+  transform: scale(1.1);
+}
+
+.favorite-btn.remove-mode {
+  background: #ff4757;
+  color: white;
+}
+
+.favorite-btn.remove-mode:hover {
+  background: #ff3838;
+  transform: scale(1.15);
+}
+
+.route-card-content {
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.route-card-content h3 {
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+  color: var(--text-color);
+}
+
+.route-category {
+  color: var(--primary-color);
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.route-description {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 15px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  flex: 1;
+}
+
+.route-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 15px;
+  border-top: 1px solid var(--border-color);
+  margin-bottom: 10px;
+}
+
+.route-rating,
+.route-reviews {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.route-address {
+  color: #999;
+  font-size: 0.85rem;
+}
